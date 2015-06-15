@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+	<Description about="urn:mozilla:install-manifest">
+		<em:type>2</em:type>
+		<em:id>chineseperakun@gmail.com</em:id>
+		<em:name>Perapera Chinese</em:name>
+		<em:version>12.2.0</em:version>
+		<em:description>Chinese Pop-up Dictionary</em:description>
+		<em:optionsURL>chrome://cperapera/content/options.xul</em:optionsURL>
+		<em:iconURL>chrome://cperapera/skin/star32.png</em:iconURL>
+		<em:homepageURL>http://www.perapera.org/</em:homepageURL>
+		<em:creator>Justin Kovalchuk</em:creator>
+		
+		<em:contributor>Jonathan Zarate</em:contributor>
+		<em:contributor>CC-EDICT by MDGB: http://www.mdbg.net/</em:contributor>
+		<em:contributor>Rohan Hartley</em:contributor>
+		<em:unpack>true</em:unpack>
+
+		<!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>4.0</em:minVersion>
+				<em:maxVersion>34.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+</RDF>

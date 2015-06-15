@@ -1,0 +1,10 @@
+content	cperapera	chrome/content/
+content	cperapera	chrome/content/ contentaccessible=yes
+locale	cperapera	en-US	chrome/locale/en-US/
+skin	cperapera	classic/1.0	chrome/skin/classic/
+
+overlay	chrome://browser/content/browser.xul	chrome://cperapera/content/overlay.xul
+overlay	chrome://browser/content/browser.xul	chrome://cperapera/content/ckotobabar/overlay.xul
+overlay	chrome://browser/content/browser.xul	chrome://cperapera/content/dicts/dict_overlay.xul
+
+style	chrome://global/content/customizeToolbar.xul	chrome://cperapera/skin/cperapera.css

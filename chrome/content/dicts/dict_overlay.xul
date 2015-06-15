@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/javascript">
+<![CDATA[
+/*
+	Copyright 2010 Jonathan Zarate
+	http://www.polarcloud.com/rikaichan
+*/
+if (typeof(ppcDicList) == "undefined") ppcDicList = {};
+ppcDicList["chineseperakun@gmail.com"] = {
+	name: "Chinese-English",
+	version: "1.111022",
+	id: "chineseperakun@gmail.com",
+	hasType: true,
+	isName: false
+	
+	// custom open, close, findWord, findText can be definied here
+};
+]]>
+</script>
+</overlay>

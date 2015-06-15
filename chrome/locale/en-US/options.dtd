@@ -1,0 +1,88 @@
+<!ENTITY Title "Perapera Chinese Options">
+<!ENTITY NoteRestartBrowser "Note: Restart the browser after making changes.">
+
+<!ENTITY Tab.General "General">
+<!ENTITY Tab.Popup "Popup">
+<!ENTITY Tab.Keyboard "Keyboard">
+<!ENTITY Tab.Dictionaries "Dictionaries">
+<!ENTITY Tab.About "Thank You">
+
+<!ENTITY General.Icon "Toolbar Icon">
+<!ENTITY General.Icon.Classic "Classic">
+<!ENTITY General.Icon.China "China">
+<!ENTITY General.Icon.Taiwan "Taiwan">
+<!ENTITY General.Icon.Singapore "Singapore">
+<!ENTITY General.Icon.Safe "Country-less">
+
+<!ENTITY General.EnableMode "Enable mode">
+<!ENTITY General.CurrentTabOnly "Current tab only">
+<!ENTITY General.CurrentBrowserOnly "Current browser only">
+<!ENTITY General.AllBrowsers "All browsers">
+<!ENTITY General.AlwaysEnableAtStartup "Always enable at startup">
+
+<!ENTITY General.HighlightText "Highlight text">
+<!ENTITY General.TranAltTitle "Translate alt/title tags">
+<!ENTITY General.SelectedInLookupBar "Automatically use selected text in Lookupbar">
+<!ENTITY General.BottomLookupBar "Show Lookupbar at the bottom">
+<!ENTITY General.EnlargeSmallDocuments "Enlarge small documents">
+<!ENTITY General.ShowIconInStatusbar "Show icon in statusbar">
+
+<!ENTITY Popup.Theme "Theme">
+<!ENTITY Popup.Charcoal "Charcoal">
+<!ENTITY Popup.Paper "Paper">
+<!ENTITY Popup.Sepia "Sepia">
+
+<!ENTITY Popup.Hanzi "Hanzi">
+<!ENTITY Popup.Simp "Simplified">
+<!ENTITY Popup.Trad "Traditional">
+<!ENTITY Popup.SimpTrad "Simp, Trad">
+<!ENTITY Popup.TradSimp "Trad, Simp">
+
+<!ENTITY Popup.Pinyin "Pinyin">
+<!ENTITY Popup.ToneMarks "Tone Marks">
+<!ENTITY Popup.ToneNums "Tone Numbers">
+<!ENTITY Popup.Zhuyin "Zhuyin">
+<!ENTITY Popup.ToneColors "Show Tone Colors">
+
+<!ENTITY Popup.Tones "Tones">
+<!ENTITY Popup.Tone1Color "Tone 1 Color">
+<!ENTITY Popup.Tone2Color "Tone 2 Color">
+<!ENTITY Popup.Tone3Color "Tone 3 Color">
+<!ENTITY Popup.Tone4Color "Tone 4 Color">
+<!ENTITY Popup.Tone5Color "Neutral Tone Color ">
+<!ENTITY Popup.PinyinColor "Pinyin Color">
+<!ENTITY Popup.ResetColors "Reset Colors">
+
+<!ENTITY Popup.MaxEntries "Maximum entries displayed">
+<!ENTITY Popup.HideDefinitions "Hide definitions">
+<!ENTITY Popup.MaxEntries "Maximum entries displayed">
+<!ENTITY Popup.HideX "Hide (X)-rated entries">
+<!ENTITY Popup.ShowWordType "Show word type indicators [example: (v1,n)]">
+<!ENTITY Popup.ShowPopular "Show &quot;popular&quot; indicator [example: (P)]">
+
+<!ENTITY Keyboard.Toggle "Toggle">
+<!ENTITY Keyboard.LookupBar "LookupBar">
+<!ENTITY Keyboard.Ctrl "Ctrl">
+<!ENTITY Keyboard.Alt "Alt">
+<!ENTITY Keyboard.Shift "Shift">
+
+<!ENTITY Keyboard.KeysWhenVisible "Keys when popup is visible">
+<!ENTITY Keyboard.AlternateView "Alternate view">
+<!ENTITY Keyboard.StickyPopup "Sticky popup">
+<!ENTITY Keyboard.MovePopupDown "Move popup down temporarily">
+<!ENTITY Keyboard.CopyToClipboard "Copy to clipboard">
+<!ENTITY Keyboard.ShowHideWordlist "Show/Hide Wordlist">
+<!ENTITY Keyboard.SaveToWordlist "Save to Wordlist">
+<!ENTITY Keyboard.HideShowDefinitions "Hide/show definitions">
+<!ENTITY Keyboard.SwitchDictionary "Switch dictionary">
+<!ENTITY Keyboard.PreviousCharacter "Previous character">
+<!ENTITY Keyboard.NextCharacter "Next character">
+<!ENTITY Keyboard.NextWord "Next word">
+<!ENTITY Keyboard.DisableTheseKeys "Disable these keys">
+
+<!ENTITY Dictionaries.Priority "Priority">
+<!ENTITY Dictionaries.Download "Download...">
+
+<!ENTITY About.Header "Thank you for using our Firefox plugin!">
+<!ENTITY About.Body "Originally created in 2005 (and reinvigorated in 2011), we here at Perapera Language Tools are commited to developing tools to help aid your language studies. We will be releasing more apps/plugins and more new features in 2012, so stay informed by visiting our site, following us on Twitter, or liking us on Facebook.">
+<!ENTITY About.Footer "...and as always, donations are always appreciated :)">

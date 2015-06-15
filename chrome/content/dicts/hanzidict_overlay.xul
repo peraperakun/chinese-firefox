@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/javascript">
+<![CDATA[
+/*
+	Copyright 2010 Jonathan Zarate
+	http://www.polarcloud.com/rikaichan
+*/
+if (typeof(ppcDicList) == "undefined") ppcDicList = {};
+ppcDicList["hanzi@local"] = {
+	name: "Hanzi Character Dictionary",
+	version: "1.0",
+	id: "hanzi@local",
+	hasType: true,
+	isHanzi: true,
+	isName: false,
+	
+	// custom open, close, findWord, findText can be definied here
+	open: function() {
+		try {
+			if (this.rdb) return;
+
+			this.rdb = new ppcDb('chineseperakun@gmail.com|hanzi.sqlite');
+			this.rdb.open();
+			this.checkIndex('hanzi');
+		}
+		catch (ex) {
+			this.close();
+			throw ex;
+		}
+	},
+	
+	checkIndex: function(name) {
+		var ix = 'ix_' + name;
+		if (this.rdb.indexExists(ix)) return;
+
+		if (!ppcData.indexCreateNotice) {
+			alert('A dictionary index needs to be created. This may take a while on some systems. Click OK to start.');
+			ppcData.indexCreateNotice = true;
+		}
+
+		this.rdb.exec('CREATE INDEX ' + ix + ' ON dict (' + name + ' ASC)');
+	},
+
+	find: function(query, arg1) {
+		if (!this.rdb) this.open();
+		var i = 0,
+			x = [],
+			r = this.rdb.exec(query, arg1);
+
+		for (i = 0; i < r.length; ++i) {
+			x = r[i];
+			return x.hanzi + "\t" + x.kHanyuPinyin;
+		}
+		return null;
+	},
+
+	findWord: function(word) {
+		return this.find('SELECT * FROM dict WHERE hanzi=?1 LIMIT 100', word);
+	},
+
+	close: function() {
+		if (this.rdb) {
+			try {
+				this.rdb.close();
+			}
+			catch (ex) {
+			}
+			this.rdb = null;
+		}
+	}
+};
+]]>
+</script>
+</overlay>

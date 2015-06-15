@@ -1,0 +1,106 @@
+
+#cperapera-lbar-close {
+	list-style-image: url("chrome://cperapera/skin/smile.png");
+}
+
+#cperapera-lbar-close:hover {
+	list-style-image: url("chrome://cperapera/skin/smile_close.png");
+}
+
+#cperapera-lbar-close.waiting {
+	list-style-image: url("chrome://cperapera/skin/smile_wait.png");
+}
+
+#cperapera-lbar-search {
+	list-style-image: url("chrome://cperapera/skin/search.png");
+}
+
+#cperapera-lbar-copy {
+	list-style-image: url("chrome://cperapera/skin/copy.png");
+}	
+
+#cperapera-lbar-save {
+	list-style-image: url("chrome://cperapera/skin/save.png");
+}
+
+#pc-china-icn {
+	list-style-image: url("chrome://cperapera/skin/chinese_on.png");
+}
+
+#cperapera-lbar-config {
+	list-style-image: url("chrome://cperapera/skin/config.png");
+}
+#cperapera-toggle-button {
+	list-style-image: url("chrome://cperapera/skin/star_off.png");
+}
+#cperapera-toggle-button[flag=pera] {
+	list-style-image: url("chrome://cperapera/skin/star_off.png");
+}
+#cperapera-toggle-button[rc_enabled=true][flag=pera]{
+	list-style-image: url("chrome://cperapera/skin/star.png");
+}
+#cperapera-toggle-button[flag=china] {
+	list-style-image: url("chrome://cperapera/skin/chinese_off.png");
+}
+#cperapera-toggle-button[rc_enabled=true][flag=china] {
+	list-style-image: url("chrome://cperapera/skin/chinese_on.png");
+}
+#cperapera-toggle-button[flag=safe] {
+	list-style-image: url("chrome://cperapera/skin/chineseSafe_off.png");
+}
+#cperapera-toggle-button[rc_enabled=true][flag=safe] {
+	list-style-image: url("chrome://cperapera/skin/chineseSafe_on.png");
+}
+#cperapera-toggle-button[flag=taiwan] {
+	list-style-image: url("chrome://cperapera/skin/taiwan_off.png");
+}
+#cperapera-toggle-button[rc_enabled=true][flag=taiwan] {
+	list-style-image: url("chrome://cperapera/skin/taiwan_on.png");
+}
+#cperapera-toggle-button[flag=sing] {
+	list-style-image: url("chrome://cperapera/skin/sing_off.png");
+}
+#cperapera-toggle-button[rc_enabled=true][flag=sing] {
+	list-style-image: url("chrome://cperapera/skin/sing_on.png");
+}
+#cperapera-lbar-button {
+	list-style-image: url("chrome://cperapera/skin/smile_lbar.png");
+}
+
+#cperapera-toggle-button-gs {
+	list-style-image: url("chrome://cperapera/skin/smile_gs.png");
+}
+#cperapera-toggle-button-gs[checked=true] {
+	list-style-image: url("chrome://cperapera/skin/smile_star_gs.png");
+}
+#cperapera-lbar-button-gs {
+	list-style-image: url("chrome://cperapera/skin/smile_lbar_gs.png");
+}
+
+#cperapera-status {
+	list-style-image: url("chrome://cperapera/skin/smile_grey.png");
+}
+#cperapera-status[rc_enabled=true] {
+	list-style-image: url("chrome://cperapera/skin/smile_star.png");
+}
+
+#ppc-lookupbar-text {
+	min-width: 150px;
+}
+
+#ppc-lookupbox-text {
+	min-width: 65px;
+}
+
+#ppc-lookupbox-grip,
+#ppc-lookupbar-grip {
+	background-image: url("chrome://cperapera/skin/gripper.png");
+	min-height: 22px;
+	min-width: 3px;
+}
+
+#ppc-lookupbox-split,
+#ppc-lookupbar-split {
+	background: transparent;
+	border: none !important;
+}

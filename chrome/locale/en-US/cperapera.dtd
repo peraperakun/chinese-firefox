@@ -1,0 +1,32 @@
+﻿
+<!ENTITY cperapera.toggle.cm "Perapera Chinese">
+<!ENTITY cperapera.toggle.cm.key "K">
+
+<!ENTITY cperapera.toggle.tm "Perapera Chinese">
+<!ENTITY cperapera.toggle.tm.key "K">
+
+<!ENTITY cperapera.lbar.cm "Perapera Chinese Lookupbar">
+<!ENTITY cperapera.lbar.cm.key "L">
+
+<!ENTITY cperapera.lbar.tm "Perapera Chinese Lookupbar">
+<!ENTITY cperapera.lbar.tm.key "L">
+
+<!ENTITY cperapera.copy.cm "Perapera Chinese Copy">
+<!ENTITY cperapera.copy.cm.key "C">
+
+<!ENTITY cperapera.copy.tm "Perapera Chinese Copy">
+<!ENTITY cperapera.copy.tm.key "C">
+
+<!ENTITY cperapera.lbar.close.tip "Close Lookupbar">
+<!ENTITY cperapera.lbar.search.tip "Search / Again">
+<!ENTITY cperapera.lbar.copy.tip "Copy Result">
+<!ENTITY cperapera.lbar.save.tip "Save Result">
+<!ENTITY cperapera.lbar.config.tip "Configure">
+
+<!ENTITY cperapera.toolbar.toggle "Perapera Chinese">
+<!ENTITY cperapera.toolbar.toggle.tip "Perapera Chinese">
+<!ENTITY cperapera.toolbar.lbar "Lookupbar">
+<!ENTITY cperapera.toolbar.lbar.tip "Perapera Chinese Lookupbar">
+<!ENTITY cperapera.toolbar.options "Options...">
+
+<!ENTITY cperapera.ckotobabar.showhide "Show/Hide Wordlist">

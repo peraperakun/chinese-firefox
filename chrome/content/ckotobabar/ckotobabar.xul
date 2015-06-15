@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cperapera/skin/classic/ckotobabar.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://cperapera/locale/ckotobabar.dtd">
+
+<window id="ckotobabar" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script type="application/x-javascript" src="ckotobabar.js" />
+
+
+<listbox id="entriesListbox" flex="1">
+
+  <listhead>
+    <listheader></listheader>
+    <listheader label="&cperapera.ckotobabar.header.word;"/>
+    <listheader label="&cperapera.ckotobabar.header.reading;"/>
+    <listheader label="&cperapera.ckotobabar.header.meaning;"/>
+  </listhead>
+
+  <listcols>
+    <listcol align="center"/>
+    <listcol/>
+    <listcol/>
+    <listcol flex="1"/>
+  </listcols>
+<!--
+<listitem onclick="ckotobabar.toggleCheck('pera_sbcb0');">
+	<listcell><checkbox id="pera_sbcb0" /></listcell>
+	<listcell label="?"/>
+	<listcell label="??"/>
+	<listcell label="hill"/>
+</listitem>
+-->
+ 	
+ </listbox>
+
+<hbox align="center">
+	<button flex="1" type="menu" label="&cperapera.ckotobabar.select;">
+	  <menupopup>
+	    <menuitem label="&cperapera.ckotobabar.select.all;" onclick="ckotobabar.setAllCheckboxes(true);"/>
+	    <menuitem label="&cperapera.ckotobabar.select.none;" onclick="ckotobabar.setAllCheckboxes(false);"/>
+	  </menupopup>
+	</button>
+	<button flex="1" type="menu" label="&cperapera.ckotobabar.entries;">
+	  <menupopup>
+	    <menuitem label="&cperapera.ckotobabar.entries.copy;" onclick="ckotobabar.copyToClipboard();"/>
+	    <menuitem label="&cperapera.ckotobabar.entries.export;" onclick="ckotobabar.exportToFile();"/>
+	    <menuitem label="&cperapera.ckotobabar.entries.delete;" onclick="ckotobabar.removeSelectedEntries();"/>
+	  </menupopup>
+	</button>
+	<!-- <button flex="1" label="&cperapera.ckotobabar.entries.grab;" onclick="ckotobabar.grabEntries();" /> -->
+</hbox>
+
+</window>
+	

@@ -1,0 +1,21 @@
+<!ENTITY cperapera.ckotobabar.title "Perapera Chinese Wordlist">
+
+<!ENTITY cperapera.ckotobabar.header.word "Word">
+<!ENTITY cperapera.ckotobabar.header.reading "Reading">
+<!ENTITY cperapera.ckotobabar.header.meaning "Meaning">
+
+<!ENTITY cperapera.ckotobabar.select "Select">
+<!ENTITY cperapera.ckotobabar.select.all "All">
+<!ENTITY cperapera.ckotobabar.select.none "None">
+
+<!ENTITY cperapera.ckotobabar.entries "Entries...">
+<!ENTITY cperapera.ckotobabar.entries.copy "Copy">
+<!ENTITY cperapera.ckotobabar.entries.export "Export">
+<!ENTITY cperapera.ckotobabar.entries.delete "Delete">
+<!ENTITY cperapera.ckotobabar.entries.grab "Grab Entries!">
+
+<!ENTITY cperapera.ckotobabar.dontshow "Don't show this dialog next time">
+<!ENTITY cperapera.ckotobabar.deletewarning "Are you sure you want to delete the selected entries (this can't be undone)?">
+
+<!ENTITY cperapera.ckotobabar.commandkey "E">
+<!ENTITY cperapera.ckotobabar.modifierskey "shift accel">

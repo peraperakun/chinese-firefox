@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://cperapera/locale/ckotobabar.dtd">
+<overlay id="ckotobasidebarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  
+  <!-- <keyset id="mainKeyset">
+		<key id="key_openKotobaSidebar" command="viewCKotobaSidebar"
+			key="&cperapera.ckotobabar.commandkey;"
+			modifiers="&cperapera.ckotobabar.modifierskey;" />
+  </keyset>
+ 
+  <menupopup id="viewSidebarMenu">
+  	<menuitem key="key_openKotobaSidebar" observes="viewCKotobaSidebar"  />
+  </menupopup>
+ --> 
+	<broadcasterset id="mainBroadcasterSet">
+		<broadcaster id="viewCKotobaSidebar"
+					label="&cperapera.ckotobabar.title;"
+					autoCheck="false"
+					type="checkbox"
+					group="sidebar"
+					sidebarurl="chrome://cperapera/content/ckotobabar/ckotobabar.xul"
+					sidebartitle="&cperapera.ckotobabar.title;"
+					oncommand="toggleSidebar('viewCKotobaSidebar');" />
+	</broadcasterset>
+  
+</overlay>

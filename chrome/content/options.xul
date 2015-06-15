@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+	Perapera Chinese
+	Copyright (C) 2005-2011 Jonathan Zarate
+	http://www.polarcloud.com/
+
+
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+
+	Please do not change or remove any of the copyrights or links to web pages
+	when modifying any of the files. - Jon
+
+-->
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://cperapera/locale/options.dtd">
+
+<dialog title="&Title;"
+		xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+		buttons="accept,cancel"
+		ondialogaccept="return ppcOptions.onOK();"
+		ondialogcancel="return true;"
+		onload="ppcOptions.onLoad();">
+
+<script type="application/javascript;version=1.7" src="config.js"/>
+<script type="application/javascript;version=1.7" src="options.js"/>
+
+<commandset>
+	<command id="cperapera-theme-changed-cmd" oncommand="ppcOptions.resetColors()"/>
+</commandset>
+
+<tabbox id="ccp-tabbox">
+<tabs>
+	<tab label="&Tab.General;"/>
+	<tab label="&Tab.Popup;"/>
+	<tab label="&Tab.Keyboard;"/>
+	<tab label="&Tab.Dictionaries;"/>
+	<tab label="&Tab.About;"/>
+</tabs>
+<tabpanels>
+
+	<tabpanel><!-- General-->
+	<vbox flex="0.5">
+		<groupbox>
+		<caption label="&General.Icon;" />
+				<radiogroup id="ccp-flag">
+				<radio label="&General.Icon.Classic;" value="pera" src="chrome://cperapera/skin/star.png"/>
+				<radio label="&General.Icon.China;" value="china" src="chrome://cperapera/skin/chinese_on.png"/>
+				<radio label="&General.Icon.Taiwan;" value="taiwan" src="chrome://cperapera/skin/taiwan_on.png" />
+				<radio label="&General.Icon.Singapore;" value="sing" src="chrome://cperapera/skin/sing_on.png" />
+				<radio label="&General.Icon.Safe;" value="safe" src="chrome://cperapera/skin/chineseSafe_on.png"/>
+				</radiogroup>
+				<label value="&NoteRestartBrowser;"/>
+		</groupbox>
+		<hbox>
+			<label value="&General.EnableMode;" control="ccp-enmode"/>
+			<menulist id="ccp-enmode">
+				<menupopup>
+				<menuitem label="&General.CurrentTabOnly;" value="0"/>
+				<menuitem label="&General.CurrentBrowserOnly;" value="1"/>
+				<menuitem label="&General.AllBrowsers;" value="2"/>
+				<menuitem label="&General.AlwaysEnableAtStartup;" value="3"/>
+				</menupopup>
+			</menulist>
+		</hbox>
+		<checkbox label="&General.HighlightText;" id="ccp-highlight"/>
+		<checkbox label="&General.TranAltTitle;" id="ccp-title"/>
+		<checkbox label="&General.SelectedInLookupBar;" id="ccp-selinlb"/>
+		<checkbox label="&General.BottomLookupBar;" id="ccp-bottomlb" hidden="true" />
+		<checkbox label="&General.EnlargeSmallDocuments;" id="ccp-resizedoc"/>
+		<checkbox label="&General.ShowIconInStatusbar;" hidden="true" id="ccp-sticon"/>
+	</vbox>
+	</tabpanel>
+	
+	<tabpanel><!-- Popup-->
+	<vbox flex="1">
+	<hbox>
+		<grid>
+			<columns><column/><column/></columns>
+			<rows>
+				<row>
+				<label value="&Popup.Theme;" control="ccp-css"/>
+					<menulist id="ccp-css" command="cperapera-theme-changed-cmd">
+						<menupopup>
+						<menuitem label="&Popup.Charcoal;" value="charcoal" />
+						<menuitem label="&Popup.Paper;" value="paper" />
+						<menuitem label="&Popup.Sepia;" value="sepia" />
+						</menupopup>
+					</menulist>
+				</row>
+				<row>
+				<label value="&Popup.Hanzi;"/>
+					<menulist id="ccp-showhanzi">
+					<menupopup>
+						<menuitem label="&Popup.Simp;" value="simp"/>
+						<menuitem label="&Popup.Trad;" value="trad"/>
+						<menuitem label="&Popup.TradSimp;" value="botht"/>
+						<menuitem label="&Popup.SimpTrad;" value="boths"/>
+					</menupopup>
+					</menulist>
+				</row>
+				<row>
+				<label value="&Popup.Pinyin;"/>
+					<menulist id="ccp-pinyin">
+					<menupopup>
+						<menuitem label="&Popup.ToneMarks;" value="tonemarks"/>
+						<menuitem label="&Popup.ToneNums;" value="tonenums"/>
+						<menuitem label="&Popup.Zhuyin;" value="zhuyin"/>
+					</menupopup>
+					</menulist>
+				</row>
+				<row>
+					<label value="&Popup.MaxEntries;" control="ccp-wmax"/>
+					<textbox id="ccp-wmax" maxlength="5" size="5"/>
+				</row>
+				
+				<checkbox label="&Popup.HideDefinitions;" id="ccp-hidedef"/>
+				<checkbox hidden="true" label="&Popup.HideX;" id="ccp-hidex"/>
+				<checkbox hidden="true" label="&Popup.ShowWordType;" id="ccp-wpos"/>
+				<checkbox hidden="true" label="&Popup.ShowPopular;" id="ccp-wpop"/>
+				<checkbox label="&Popup.ToneColors;" id="ccp-docolors"/>
+				<groupbox>
+					<caption label="&Popup.Tones;" />
+					<grid>
+						<columns><column/><column/></columns>
+						<rows>
+							<row>
+								<label value="&Popup.Tone1Color;" />
+								<colorpicker type="button" id="ccp-cpick1"/>
+							</row>
+							<row>
+								<label value="&Popup.Tone2Color;" />
+								<colorpicker type="button" id="ccp-cpick2"/>
+							</row>
+							<row>
+								<label value="&Popup.Tone3Color;" />
+								<colorpicker type="button" id="ccp-cpick3"/>
+							</row>
+							<row>
+								<label value="&Popup.Tone4Color;" />
+								<colorpicker type="button" id="ccp-cpick4"/>
+							</row>
+							<row>
+								<label value="&Popup.Tone5Color;" />
+								<colorpicker type="button" id="ccp-cpick5"/>
+							</row>
+							<row>
+								<label value="&Popup.PinyinColor;" />
+								<colorpicker type="button" id="ccp-cpinyin"/>
+							</row>
+						</rows>
+					</grid>
+					<spacer height="10"/>
+					<button label="&Popup.ResetColors;" oncommand="ppcOptions.resetColors()" />
+				</groupbox>
+			</rows>
+		</grid>
+		<iframe src="chrome://cperapera/locale/minihelp.htm"/>
+		</hbox>
+		</vbox>
+	</tabpanel>
+
+	<tabpanel><!-- Keyboard -->
+		<vbox>
+			<grid>
+				<columns><column/><column/><column/><column/><column/></columns>
+				<rows>
+					<row>
+						<label value="&Keyboard.Toggle;"/>
+						<checkbox label="&Keyboard.Ctrl;" id="ccp-toggle-accel"/>
+						<checkbox label="&Keyboard.Alt;" id="ccp-toggle-alt"/>
+						<checkbox label="&Keyboard.Shift;" id="ccp-toggle-shift"/>
+						<menulist id="ccp-toggle-key" editable="true" oninput="ppcOptions.keyChanged(this)" oncommand="ppcOptions.keyChanged(this)">
+							<menupopup id="ccp-toggle-list"/>
+						</menulist>
+					</row>
+					<!--
+					<row>
+						<label value="&Keyboard.LookupBar;"/>
+						<checkbox label="&Keyboard.Ctrl;" id="ccp-lbar-accel"/>
+						<checkbox label="&Keyboard.Alt;" id="ccp-lbar-alt"/>
+						<checkbox label="&Keyboard.Shift;" id="ccp-lbar-shift"/>
+						<menulist id="ccp-lbar-key" editable="true" oninput="ppcOptions.keyChanged(this)" oncommand="ppcOptions.keyChanged(this)">
+							<menupopup id="ccp-lbar-list"/>
+						</menulist>
+					</row>
+					-->
+				</rows>
+			</grid>
+
+			<description value="&NoteRestartBrowser;"/>
+
+			<spacer style="height:2em"/>
+
+			<groupbox>
+				<caption label="&Keyboard.KeysWhenVisible;"/>
+				<grid>
+					<columns><column/><column/></columns>
+					<rows>
+						<row>
+							<description value="&Keyboard.AlternateView;"/>
+							<description value="A"/>
+						</row>
+						<row>
+							<description value="&Keyboard.StickyPopup;"/>
+							<description value="K"/>
+						</row>
+						<row>
+							<description value="&Keyboard.MovePopupDown;"/>
+							<description value="Y"/>
+						</row>
+						<row>
+							<description value="&Keyboard.CopyToClipboard;"/>
+							<description value="C"/>
+						</row>
+						<row>
+							<description value="&Keyboard.ShowHideWordlist;"/>
+							<description value="W"/>
+						</row>
+						<row>
+							<description value="&Keyboard.SaveToWordlist;"/>
+							<description value="S"/>
+						</row>
+						<row>
+							<description value="&Keyboard.HideShowDefinitions;"/>
+							<description value="D"/>
+						</row>
+						<row>
+							<description value="&Keyboard.SwitchDictionary;"/>
+							<description value="SHIFT, ENTER, 1-9"/>
+						</row>
+						<row>
+							<description value="&Keyboard.PreviousCharacter;"/>
+							<description value="B"/>
+						</row>
+						<row>
+							<description value="&Keyboard.NextCharacter;"/>
+							<description value="M"/>
+						</row>
+						<row>
+							<description value="&Keyboard.NextWord;"/>
+							<description value="N"/>
+						</row>
+					</rows>
+				</grid>
+				<spacer style="height:1em"/>
+				<checkbox label="&Keyboard.DisableTheseKeys;" id="ccp-nopopkeys"/>
+			</groupbox>
+		</vbox>
+	</tabpanel>
+
+	<tabpanel><!-- Dictionaries -->
+		<vbox flex="1">
+		<groupbox flex="1">
+			<caption label="&Dictionaries.Priority;"/>
+			<hbox flex="1">
+				<listbox id="ccp-priority" flex="1" />
+				<vbox>
+					<button label="&#8593;" oncommand="ppcOptions.movePriority(-1)"/>
+					<button label="&#8595;" oncommand="ppcOptions.movePriority(1)"/>
+					<spacer style="height:2em"/>
+					<button label="&Dictionaries.Download;" oncommand="ppcOptions.download()"/>
+				</vbox>
+			</hbox>
+		</groupbox>
+		</vbox>
+	</tabpanel>
+	<tabpanel><!-- Dictionaries -->
+		<vbox flex="0">
+		<hbox pack="center">
+			<label style="color:#3366FF;font-size:20px;" value="&About.Header;"/>
+		</hbox>
+		<separator height="40"/>
+		<description style="max-width: 450px;">&About.Body;</description>
+		<separator height="60"/>
+				<hbox pack="center" align="center">
+			<!--<image src="chrome://cperapera/skin/peralink.png" style="border-style:solid;border-color:#666666;border-width:1px;border-radius:5px 5px 5px 5px;padding-bottom:3px;padding-left:3px;padding-right:4px;padding-top:6px;background-color:#FFFFFF;" onclick="peraPrefs.donate();"/>-->
+			<image src="chrome://cperapera/skin/twitter.png" onclick="ppcOptions.gotoLink(2);"/>
+			<separator width="20"/>
+			<image src="chrome://cperapera/skin/peralink.png" onclick="ppcOptions.gotoLink(1);"/>
+			<separator width="20"/>
+			<image src="chrome://cperapera/skin/facebook.png" onclick="ppcOptions.gotoLink(3);"/>
+		</hbox>
+		<separator height="70"/>
+		<hbox pack="center">
+			<label value="&About.Footer;"/>
+		</hbox>
+		<separator />
+		<hbox pack="center">
+			<image src="chrome://cperapera/skin/donate.png" style="border-color:#666666;border-width:1px;border-style:solid;" onclick="ppcOptions.gotoLink(4);"/>
+		</hbox>
+		</vbox>
+	</tabpanel>
+</tabpanels>
+</tabbox>
+</dialog>

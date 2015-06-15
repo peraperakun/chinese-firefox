@@ -1,0 +1,140 @@
+/* this is to reset almost everything under the popup to a sane value */
+#cperapera-window, #cperapera-window *{ 
+	width: auto;
+	height: auto;
+	background: transparent;
+	color: #FFFFFF;
+	border: none !important;
+	border-spacing: 0px;
+	margin: 0px;
+	padding: 0px;
+	letter-spacing: normal;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: none;
+	white-space: normal;
+	word-spacing: normal;
+	font: normal 14px sans-serif;
+	visibility: visible;
+}
+
+#cperapera-window[dropdown] { 
+    margin: 0 auto;
+    width: 900px; 
+    top: 0px;
+    visibility: hidden;
+}
+
+#cperapera-window { 
+  	background: url("hash.png") repeat scroll 0 0 #2D2D2D;
+    border: 2px solid #BCBCBC !important;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 0 15px #878787;
+    min-width: 100px;
+    padding: 6px 8px;
+    position: absolute;
+    z-index: 7777;
+}
+
+#cperapera-dropdown { 
+    background: url("dropdown-small.png") no-repeat scroll 0 0 #2D2D2D;
+    border: 2px solid #BCBCBC !important;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 0 15px #878787;
+    height: 220px;
+    padding: 1px 8px;
+    position: absolute;
+    top: -3px;
+    width: 322px;
+	left: 50%; 
+	margin-left: -161px;
+    z-index: 7777;
+}
+
+#cperapera-window td {
+	text-align: center;
+}
+#cperapera-window  .special {
+	padding-left: 10px;
+    text-align: left;
+	vertical-align: middle;
+    font-size: 12px;
+}
+#cperapera-window .title {
+    background: none repeat scroll 0 0 #303030;
+    border-radius: 8px 8px 8px 8px;
+    color: #8C9196;
+    display: block;
+    font-size: 12px;
+    margin: 0 -4px 5px;
+    padding: 3px 6px 3px 3px;
+    text-align: right;
+}
+
+#cperapera-window .hanzi {
+	font-size: 28px;
+}
+#cperapera-window .pinyin {
+	font-size: 16px;
+}
+#cperapera-window .tone1 {
+	color: #F2777A;
+}
+#cperapera-window .tone2 {
+	color: #99CC99;
+}
+#cperapera-window .tone3 {
+	color: #6699CC;
+}
+#cperapera-window .tone4 {
+	color: #CC99CC;
+}
+#cperapera-window .tone5 {
+	color: #CCCCCC;
+}
+#cperapera-window .defn {
+	float: right;
+	color: #FFFFFF;
+	font-size: 12px;
+	max-width: 450px;
+	max-width: 400px;
+	padding-left: 10px;
+}
+
+#cperapera-window .hanzi_old1 {
+	font-size: 18px;
+	color: #F2777A;
+}
+
+#cperapera-window .hanzi_old2 {
+	font-size: 18px;
+	color: #99CC99;
+}
+
+#cperapera-window .hanzi_old3 {
+	font-size: 18px;
+	color: #6699CC;
+}
+
+#cperapera-window .hanzi_old4 {
+	font-size: 18px;
+	color: #CC99CC;
+}
+
+#cperapera-window .hanzi_old5 {
+	font-size: 18px;
+	color: #CCCCCC;
+}
+
+#cperapera-window .pinyin_old {
+	font-size: 16px;
+	margin-left: 0.7em;
+	color: #66CCCC;
+}
+
+#cperapera-window .defn_old {
+	color: #FFFFFF;
+	font-size: 12px;
+	display: block;
+}

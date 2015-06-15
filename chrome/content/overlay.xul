@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!--
+
+	Perapera Chinese
+	Copyright (C) 2005-2011 Jonathan Zarate
+	http://www.polarcloud.com/
+
+
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+
+	Please do not change or remove any of the copyrights or links to web pages
+	when modifying any of the files. - Jon
+
+-->
+<?xml-stylesheet href="chrome://cperapera/skin/cperapera.css" type="text/css"?>
+<?xml-stylesheet href="chrome://cperapera/skin/ckotobabar.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://cperapera/locale/cperapera.dtd">
+
+<overlay id="cperapera" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<!-- <script type="application/javascript;version=1.7" src="jQuery/jquery-1.7.2.min.js"/> -->
+<script type="application/javascript;version=1.7" src="config.js" />
+<script type="application/javascript;version=1.7" src="cperapera.js" />
+<script type="application/javascript;version=1.7" src="cdata.js" />
+
+<commandset id="mainCommandSet">
+	<command id="cperapera-toggle-cmd" oncommand="ppcMain.toggle()"/>
+	<command id="cperapera-lbar-cmd" oncommand="ppcMain.lbToggle()"/>
+	<command id="cperapera-copy-cmd" oncommand="ppcMain.copyToClip()"/>
+	<command id="cperapera-options-cmd" oncommand="ppcMain.configPage()"/>
+	<command id="cperapera-ckotobabar-toggle-cmd" oncommand="toggleSidebar('viewCKotobaSidebar')"/>
+</commandset>
+
+<popup id="contentAreaContextMenu">
+	<menuseparator id="cperapera-separator-cm" hidden="true"/>
+	<menuitem id="cperapera-toggle-cm" 
+		label="&cperapera.toggle.cm;"
+		accesskey="&cperapera.toggle.cm.key;" 
+		key="cperapera-toggle-key" 
+		command="cperapera-toggle-cmd" 
+		type="checkbox" 
+		hidden="true"/>
+	<menuitem id="cperapera-lbar-cm" 
+		label="&cperapera.lbar.cm;"
+		accesskey="&cperapera.lbar.cm.key;" 
+		key="cperapera-lbar-key" 
+		command="cperapera-lbar-cmd" 
+		hidden="true"/>
+	<menuitem id="cperapera-copy-cm" 
+		label="&cperapera.copy.cm;"
+		accesskey="&cperapera.copy.cm.key;" 
+		key="cperapera-copy-key" 
+		command="cperapera-copy-cmd" 
+		hidden="true"/>
+</popup>
+
+<menupopup id="menu_ToolsPopup">
+	<menuseparator id="cperapera-separator-tm" hidden="true"
+		insertbefore="devToolsSeparator"/>
+	<menuitem id="cperapera-toggle-tm" 
+		label="&cperapera.toggle.tm;" 
+		accesskey="&cperapera.toggle.tm.key;"
+		key="cperapera-toggle-key" 
+		command="cperapera-toggle-cmd" 
+		type="checkbox" hidden="true" 
+		insertbefore="devToolsSeparator"/>
+	<menuitem id="cperapera-lbar-tm" 
+		label="&cperapera.lbar.tm;" 
+		accesskey="&cperapera.lbar.tm.key;"
+		key="cperapera-lbar-key" 
+		command="cperapera-lbar-cmd" 
+		hidden="true" 
+		insertbefore="devToolsSeparator"/>
+	<menuitem id="cperapera-copy-tm" 
+		label="&cperapera.copy.tm;" 
+		accesskey="&cperapera.copy.tm.key;"
+		key="cperapera-copy-key" 
+		command="cperapera-copy-cmd" 
+		hidden="true" 
+		insertbefore="devToolsSeparator"/>
+</menupopup>
+<!--
+<toolbox id="navigator-toolbox">
+	<toolbar id="cperapera-lbar" hidden="true" align="center" fullscreentoolbar="true" position="1000" ordinal="1000">
+		<toolbarbutton id="cperapera-lbar-close" tooltiptext="&cperapera.lbar.close.tip;"
+			oncommand="ppcMain.lbHide();" />
+
+		<toolbaritem id="ppc-lookupbar-texttbi" title="Perapera Chinese Lookup">
+			<hbox id="ppc-lookupbar-hbox" align="center" persist="width">
+				<textbox id="ppc-lookupbar-text" emptytext="cperapera" flex="1"
+					onkeypress="ppcMain.lbKeyPress(event);" />
+			</hbox>
+			<splitter id="ppc-lookupbar-split" tooltiptext="Resize" resizeafter="grow">
+				<vbox id="ppc-lookupbar-grip" />
+			</splitter>
+		</toolbaritem>
+
+		<toolbarbutton id="cperapera-lbar-search" tooltiptext="&cperapera.lbar.search.tip;"
+			oncommand="ppcMain.lbSearchButton();" />
+		<toolbarbutton id="cperapera-lbar-copy" tooltiptext="&cperapera.lbar.copy.tip;"
+			oncommand="ppcMain.copyToClip();" />
+		<toolbarbutton id="cperapera-lbar-save" tooltiptext="&cperapera.lbar.save.tip;"
+			oncommand="ppcMain.saveToFile();" />
+		<toolbarbutton id="cperapera-lbar-config" tooltiptext="&cperapera.lbar.config.tip;"
+			oncommand="ppcMain.configPage();" />
+	</toolbar>
+</toolbox>
+-->
+<toolbarpalette id="BrowserToolbarPalette">
+	<toolbarbutton id="cperapera-toggle-button" 
+		class="toolbarbutton-1"
+		label="&cperapera.toolbar.toggle;" 
+		type="menu-button" 
+		tooltiptext="&cperapera.toolbar.toggle.tip;"
+		command="cperapera-toggle-cmd" 
+		contextmenu="ppcContextMenu">
+		<menupopup>
+	       	<menuitem
+	       		id="cperapera-context-ckotobabar"
+	       		command="cperapera-ckotobabar-toggle-cmd"
+	       		label="&cperapera.ckotobabar.showhide;" />
+	        <menuseparator />
+			<menuitem 
+				label="&cperapera.toolbar.options;" 
+				command="cperapera-options-cmd"/>
+	    </menupopup>
+   </toolbarbutton>
+
+	<toolbarbutton id="cperapera-toggle-button-gs" class="toolbarbutton-1"
+		label="&cperapera.toolbar.toggle;" tooltiptext="&cperapera.toolbar.toggle.tip;"
+		command="cperapera-toggle-cmd" />
+	<!--
+	<toolbarbutton id="cperapera-lbar-button" class="toolbarbutton-1"
+		label="&cperapera.toolbar.lbar;" tooltiptext="&cperapera.toolbar.lbar.tip;"
+		command="cperapera-lbar-cmd" />
+
+	<toolbarbutton id="cperapera-lbar-button-gs" class="toolbarbutton-1"
+		label="&cperapera.toolbar.lbar;" tooltiptext="&cperapera.toolbar.lbar.tip;"
+		command="cperapera-lbar-cmd" />
+
+	<toolbaritem id="ppc-lookupbox" title="Perapera Chinese Lookup">
+		<hbox id="ppc-lookupbox-hbox" align="center" persist="width">
+			<textbox id="ppc-lookupbox-text" emptytext="cperapera" flex="1"
+				onkeypress="ppcMain.lookupBoxKey(event);" />
+		</hbox>
+		<splitter id="ppc-lookupbox-split" tooltiptext="Resize" resizeafter="grow">
+			<vbox id="ppc-lookupbox-grip" />
+		</splitter>
+	</toolbaritem>
+	-->
+</toolbarpalette>
+
+<statusbar id="status-bar" class="chromeclass-status">
+	<statusbarpanel id="cperapera-status-text" hidden="true" label="" context="" onclick="this.hidden=true;"/>
+	<statusbarpanel id="cperapera-status" class="statusbarpanel-iconic" tooltiptext="&cperapera.toolbar.toggle.tip;"
+		contextmenu="cperapera-status-menu" onclick="ppcMain.statusClick(event)"/>
+	<popupset>
+		<menupopup id="cperapera-status-menu">
+			<menuitem label="&cperapera.toolbar.toggle;" command="cperapera-toggle-cmd" type="checkbox" default="true"/>
+			<menuitem hidden="true" label="&cperapera.toolbar.lbar;" command="cperapera-lbar-cmd"/>
+			<menuitem label="&cperapera.toolbar.options;" command="cperapera-options-cmd"/>
+		</menupopup>
+	</popupset>
+</statusbar>
+
+</overlay>
